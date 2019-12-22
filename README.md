@@ -1,4 +1,4 @@
 # CS61B
-Codes for UC Berkeley, CS61B, 19Fall.<\br>
+Codes for UC Berkeley, CS61B, 19Fall.<\n>
 My project codes are not perfect, with some points lost. Thus,
 PLEASE DO NOT COPY.
