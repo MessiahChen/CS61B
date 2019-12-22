@@ -1,0 +1,20 @@
+# Check that when adding a tracked but unchanged file has no effect.
+# Set up one commit with two files.
+I setup1.inc
+> commit "Two files"
+<<<
+> add f.txt
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<

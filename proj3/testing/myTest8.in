@@ -1,0 +1,8 @@
+# Check that when adding a tracked but unchanged file has no effect.
+# Set up one commit with two files.
+I setup1.inc
+> commit "Two files"
+<<<
+> add f.txt
+<<<
+I blank-status.inc

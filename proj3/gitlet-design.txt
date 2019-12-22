@@ -1,0 +1,45 @@
+Gitlet Design Document
+----------------------
+
+
+Classes and Data Structures
+---------------------------
+**** Commit ****
+1. LinkedList<Commit> _parent: The parents of a commit.
+2. HashSet<String> _trackedFiles: The tracked files of the commit.
+3. HashMap<String, String> _fileWithBlob: A map mapping file name to blob name.
+
+**** Gitlet ****
+1. String _currentBranch: Current branch.
+2. Commit _head: Current head.
+3. HashMap<String, LinkedList<Commit>> _branchCommits: A map mapping branch name with a list of the commits in it.
+4. LinkedHashMap<String, Commit> _allCommits: A linked hashmap mapping commit id with commit instance in sequence.
+5. HashSet<String> _remove: Files to be removed.
+6. HashSet<String> _staging: A record of staging file names.
+
+**** Main ****
+Entrance of the program, takes in the commands and switch among them.
+
+Algorithms
+----------
+**** Commit ****
+1. Commit(): There are three constructors. One for initial commit, one for creating child commit and one for merge
+commit.
+2. getHash(): Calculate the SHA-1 code of the commit.
+
+**** Gitlet ****
+1. serialize(): Serialize Gitlet insatnce into sequence file to store.
+2. deserialize(): Deserialize sequence file into Gitlet insatnce.
+3. log(): Show the log of the current branch, tracing back from _head.
+4. globalLog(): Show the log of all the commits, using _allCommits.
+5. content(): Return the merge conflict string, using Utils.writeContents() to write to file afterwards.
+
+Persistence
+-----------
+1. Every time init is called, a new directory .gitlet/ will be created (if not already existed), and most persistence is
+done there.
+2. There's a .gitlet/staging/ directory stores the temporary staging files.
+3. There's a .gitlet/staging/ directory stores the blob files.
+4. Serialization is used on the Gitlet instance. Every time after one line of command is called the Gitlet instance
+will be serialized into .gitlet/gitlet.ser. When next line of command occurs, the gitlet.ser will be deserialized
+into Gitlet instance. In this way, the branch and commit information in Gitlet class will not lost.

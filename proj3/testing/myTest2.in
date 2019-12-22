@@ -1,0 +1,8 @@
+# A simple test of adding and committing.
+> init
+<<<
++ thisisnowug.txt wug2.txt
+> add thisisnowug.txt
+<<<
+> commit "add notwug"
+<<<

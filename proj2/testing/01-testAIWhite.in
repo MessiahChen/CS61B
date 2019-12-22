@@ -1,0 +1,13 @@
+#* java -ea tablut.Main
+# Check AI is right.
+manual black
+auto white
+dump
+e8-f
+dump
+f9-i
+dump
+f8-6
+dump
+f1-i
+dump

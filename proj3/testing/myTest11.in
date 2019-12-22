@@ -1,0 +1,10 @@
+# Status with a removal which is followed by an addition that restores former contents.
+# It may simply "unremove" the file without staging it.
+I setup2.inc
+> rm f.txt
+<<<
+* f.txt
++ f.txt wug.txt
+> add f.txt
+<<<
+I blank-status.inc

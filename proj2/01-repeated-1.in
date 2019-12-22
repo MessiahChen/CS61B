@@ -1,0 +1,23 @@
+#* java -ea tablut.Main
+# Make sure repeated position loses
+manual white
+i6-f
+f5-3
+i4-3
+e5-f
+i3-4
+f5-e
+# Repeated position
+#*win+
+
+new
+i6-9
+g5-4
+i9-8
+g4-5
+i8-6
+g5-4
+i6-8
+# Repeated position
+#*win+
+quit

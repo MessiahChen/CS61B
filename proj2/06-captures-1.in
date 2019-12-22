@@ -1,0 +1,35 @@
+#* java -ea tablut.Main
+# Check special case of capturing last defender around king.
+manual white
+
+h5-4
+dump
+f5-2
+dump
+f9-5
+dump
+e7-c
+dump
+a6-d
+dump
+d5-2
+dump
+d6-5
+dump
+e4-g
+dump
+a4-e
+dump
+c7-b
+dump
+e8-7
+
+new
+i6-7
+dump
+e7-c
+dump
+i7-e
+dump
+
+quit

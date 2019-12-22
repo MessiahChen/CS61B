@@ -1,0 +1,14 @@
+#* java -ea tablut.Main
+# Check undo is right.
+manual white
+manual black
+limit 3
+e8-f
+e7-f
+f9-g
+g5-6
+dump
+f8-g
+f7-9
+dump
+g8-f

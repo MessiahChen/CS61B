@@ -1,0 +1,28 @@
+# Status that is with two adds
+# Initialize and add two files.
+I prelude1.inc
++ f.txt wug.txt
++ g.txt notwug.txt
+> add g.txt
+<<<
+> add f.txt
+<<<
+> rm f.txt
+<<<
+> status
+=== Branches ===
+\*master
+
+=== Staged Files ===
+g.txt
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+${ARBLINES}
+
+<<<*
+# The file was not tracked, so make sure it's still out there.
+= f.txt wug.txt

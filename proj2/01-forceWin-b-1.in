@@ -1,0 +1,16 @@
+#* java -ea tablut.Main
+# Immediate win for Black.
+manual white
+seed 127986
+limit 9
+h5-4
+e4-b
+d1-4
+e5-4
+i6-f
+e4-g
+dump
+auto black
+dump
+#*move/win+
+quit
